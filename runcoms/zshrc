@@ -11,3 +11,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# prompt
+function nix_prompt () {
+  if [ "$IN_NIX_SHELL" -eq "1" ]; then
+    echo -n "%F{red}[$name]%f "
+  fi
+}
+export PROMPT="$(nix_prompt)$PROMPT"
+
