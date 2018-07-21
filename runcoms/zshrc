@@ -12,6 +12,8 @@ fi
 
 # Customize to your needs...
 
+source ~/.profile
+
 # prompt
 function nix_prompt () {
   if [ "$IN_NIX_SHELL" -eq "1" ]; then
